@@ -1,5 +1,3 @@
-
-
 body{
   margin: 0px;
 }
@@ -126,22 +124,27 @@ font-family: 'Nunito Sans', sans-serif;
 }
 
 #Cuerpo{
-  width: 984px;
+  max-width: 992px;
   margin: 0 auto;
 }
 
 .margin{
   margin-top: 20px;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-
+.opcional{
+  display: none !important;
+}
 
 .cuer-articulo{
   display: flex;
   flex-direction: column;
   width: 300px;
   margin:0 12.5px;
+  margin-top: 20px
 }
 
 .curp-art-imagen{
@@ -259,4 +262,12 @@ font-family: 'Poiret One', cursive;
   margin-top: 40px;
   display: flex;
   justify-content: center;
+}
+/*Iniciamos media-querys*/
+
+@media screen and (max-width: 974px) {
+  .opcional{
+    display: flex !important;
+  }
+
 }

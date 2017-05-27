@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <title>Platzi- blog </title>
   <link rel="stylesheet" href="css/css.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 </head>
 <body>
 
@@ -16,13 +16,14 @@
     <div id="enc-izq">
       <a href="index.html#"><img class="enc-logo"src="Imagenes/logo.png" alt="logo"/></a>
     </div>
-    <nav id="enc-der">
+     <span class="burguer-button icon-menu" id="burguer-button"></span>
+    <nav id="menu"  class="menu">
       <ul class="enc-lista">
-        <li><a href="#" class="enc-lis-texto" id="Cursos">Cursos  │</a></li>
-        <li><a href="index.html" class="enc-lis-texto" id="Blog">Blog  │</a></li>
-        <li><a href="#portada" class="enc-lis-texto" id="Faq">Presentacion  │</a></li>
-        <li><a href="#Footer" class="enc-lis-texto" id="Horarios">Contacto  │</a></li>
-        <li><a href="#" class="enc-lis-texto" id="Live">Live  │</a></li>
+        <li><a href="#" class="enc-lis-texto" id="Cursos">Cursos</a></li>
+        <li><a href="index.html" class="enc-lis-texto" id="Blog">Blog</a></li>
+        <li><a href="#portada" class="enc-lis-texto" id="Faq">Presentacion</a></li>
+        <li><a href="#Footer" class="enc-lis-texto" id="Horarios">Contacto</a></li>
+        <li><a href="#" class="enc-lis-texto" id="Live">Live</a></li>
       </ul>
       <a class="enc-button"href="#">Inicia sesion</a>
     </nav>
@@ -198,6 +199,13 @@
       </div>
     </div>
   </section>
-
+  <script>
+  var $burguerButton = document.getElementById("burguer-button");
+  var $menu = document.getElementById("menu");
+  $burguerButton.addEventListener("touchstart",function(){
+    $burguerButton.classList.toggle("active")
+    $menu.classList.toggle("active")
+  });
+  </script>
 </body>
 </html>

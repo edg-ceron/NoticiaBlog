@@ -25,6 +25,10 @@ body{
   display: table;
 }
 
+.enc-lis-texto::after{
+  content: "│";
+}
+
 .enc-lista a{
   text-decoration: none;
   color:white;
@@ -67,16 +71,25 @@ body{
   margin-right: 15px;
 }
 
-#enc-der{
+#menu{
   display: flex;
   align-items: flex-start;
 
+}
+
+.icon-menu{
+  background-image: url("../Imagenes/menu.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 48px;
+  display: none;
+  border-radius: 50%;
 }
 .background{
   background-image: url("../Imagenes/fondo.jpg");
   background-size: cover;
   color: #515151;
-  height: 600px;
+  height: 450px;
   display: flex;
   align-items: flex-end;
 }
@@ -146,10 +159,20 @@ font-family: 'Nunito Sans', sans-serif;
   margin:0 12.5px;
   margin-top: 20px
 }
+.cuer-articulo a{
+  overflow: hidden;
+}
 
 .curp-art-imagen{
   width: 300px;
   height: 215px;
+  transform:scale(1);
+  transition: .9s;
+  -ms-transition: all 500ms ease-in-out;
+
+}
+.curp-art-imagen:hover{
+  transform:scale(1.2);
 }
 
 .cuerp-art-nombre{
@@ -265,9 +288,137 @@ font-family: 'Poiret One', cursive;
 }
 /*Iniciamos media-querys*/
 
+@media screen and (max-width: 1200px) {
+  .background{
+    height: 450px;
+  }
+
+}
+
 @media screen and (max-width: 974px) {
   .opcional{
     display: flex !important;
   }
+  #menu{
+    font-size: 13px;
+  }
+  /*portada*/
+  .background{
+    height: 300px;
+  }
+  .port-presentacion{
+    height: 111px;
+    width: 355px;
+  }
+  .port-texto{
+    font-size: 20px;
+  }
+  .port-autor{
+    font-size: 13px;
+  }
+  .port-aut-img{
+    height: 36px;
+    width: 40px;
+  }
+  /*Cuerpo*/
+  .cuer-articulo{
+    width: 282px;
+    margin: 12px 30px;
+  }
+  .curp-art-imagen{
+    width: 100%;
+  }
+  .cuerp-art-nombre{
+    font-size: 16px;
+    margin-bottom: 14px;
+  }
+  .cuer-art-aut-texto, .cuer-art-aut-fecha{
+    font-size: 12px;
+  }
+  /*Num de pag*/
+  .numpag-text{
+    font-size: 12px;
+  }
+  .botonpag{
+    zoom: 0.7;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (max-width: 800px)  {
+  /*encabezado*/
+  .encabezado{
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
+  #Blog{
+    border: 0;
+  }
+  .enc-lista a:hover{
+    border: 0;
+  }
+  .enc-lista{
+    display: block;
+    margin: 0 auto;
+    margin-left: -50px;
+  }
+  .enc-lis-texto::after{
+    content: " ";
+  }
+  .enc-lista li{
+    text-align: center;
+    border-top: 1px solid gainsboro;
+  }
+  .enc-lista, .enc-lista li{
+    width: 100%;
+  }
+  #menu{
+    display: flex;
+    width: 100%;
+    height: 417px;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .menu{
+    position: absolute;
+    left: -100%;
+    top:100%;
+    transition: .3s;
+    background-color:rgba(0, 0, 0, 0.85);
+
+  }
+
+  .icon-menu{
+    display: block;
+    margin-right: 20px;
+    margin-top: 4px;
+    transform: rotate(0deg);
+    transition: .3s;
+  }
+
+  .icon-menu.active{
+    transform: rotate(-90deg);
+  }
+
+  .menu.active{
+    left: 0%;
+    z-index: 1;
+  }
+/*Footer*/
+.margen{
+  font-size: 19px;
+}
+.footer-img{
+  margin-top: 10px;
+}
+.footer-img-1, .footer-img-2 {
+  width: 83px;
+}
+.footer-final{
+  margin-top: 25px;
+}
+
 
 }

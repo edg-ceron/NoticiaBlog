@@ -8,25 +8,27 @@
   <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
   <title>Platzi- blog </title>
   <link rel="stylesheet" href="css/css.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 <body>
 
   <section class="encabezado">
-    <div id="enc-izq">
-      <a href="index.html#"><img class="enc-logo"src="Imagenes/logo.png" alt="logo"/></a>
+    <div class="container">
+      <div id="enc-izq">
+        <a href="index.html#"><img class="enc-logo"src="Imagenes/logo.png" alt="logo"/></a>
+      </div>
+      <span class="burguer-button icon-menu" id="burguer-button"></span>
+      <nav id="menu"  class="menu">
+        <ul class="enc-lista">
+          <li><a href="#" class="enc-lis-texto" id="Cursos">Cursos</a></li>
+          <li><a href="index.html" class="enc-lis-texto" id="Blog">Blog</a></li>
+          <li><a href="#portada" class="enc-lis-texto" id="Faq">Presentacion</a></li>
+          <li><a href="#Footer" class="enc-lis-texto" id="Horarios">Contacto</a></li>
+          <li><a href="#" class="enc-lis-texto" id="Live">Live</a></li>
+        </ul>
+        <a class="enc-button"href="#">Inicia sesion</a>
+      </nav>
     </div>
-     <span class="burguer-button icon-menu" id="burguer-button"></span>
-    <nav id="menu"  class="menu">
-      <ul class="enc-lista">
-        <li><a href="#" class="enc-lis-texto" id="Cursos">Cursos</a></li>
-        <li><a href="index.html" class="enc-lis-texto" id="Blog">Blog</a></li>
-        <li><a href="#portada" class="enc-lis-texto" id="Faq">Presentacion</a></li>
-        <li><a href="#Footer" class="enc-lis-texto" id="Horarios">Contacto</a></li>
-        <li><a href="#" class="enc-lis-texto" id="Live">Live</a></li>
-      </ul>
-      <a class="enc-button"href="#">Inicia sesion</a>
-    </nav>
 
   </section>
 
@@ -45,8 +47,8 @@
   <section id="Cuerpo">
     <div id="cuer-col1" class="margin">
       <article class="cuer-articulo">
-        <a href="Pag-ext/contenido-not.html" ><img class="curp-art-imagen" src="Imagenes/noticias/not-1.png" alt="not-1">
-          <a href="Pag-ext/contenido-not.html" class="cuerp-art-nombre">Como definir un Namespace en C#</a>
+        <a href="Pag-ext/contenido-not.html" ><img class="curp-art-imagen" src="Imagenes/noticias/not-1.jpg" alt="not-1">
+          <a href="Pag-ext/contenido-not.html" class="cuerp-art-nombre">Se derrumba una parte del Monte Everest</a>
           <div class="cuer-art-autor">
             <a href="" class="cuer-art-aut-texto">Edgar Ceron</a>
             <a class="cuer-art-aut-fecha">Abril 24 2017</a>
@@ -181,6 +183,7 @@
         <a href="Pag-ext/pagnum-blog.html" class="numpag-boton4 botonpag">4</a>
         <a href="Pag-ext/pagnum-blog.html" class="numpag-botonsiguente botonpag">Siguiente ⋗</a>
         <a href="Pag-ext/pagnum-blog.html" class="numpag-botonultima botonpag">Última Pagina ⋙</a>
+        <a href="Pag-ext/pagnum-blog.html" class="numpag-mas botonpag">Mas noticias</a>
       </div>
   </section>
 
@@ -200,12 +203,14 @@
     </div>
   </section>
   <script>
+
   var $burguerButton = document.getElementById("burguer-button");
   var $menu = document.getElementById("menu");
   $burguerButton.addEventListener("touchstart",function(){
     $burguerButton.classList.toggle("active")
     $menu.classList.toggle("active")
   });
+
   </script>
 </body>
 </html>

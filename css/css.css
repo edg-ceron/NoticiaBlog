@@ -11,6 +11,14 @@ body{
  position: relative;
  height: 57px;
 }
+.container{
+  background-color: #273b47;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100%
+}
 
 .enc-lista{
  display: inline-flex;
@@ -64,6 +72,7 @@ body{
   height: 27px;
   width: 220px;
   margin-top: 15px;
+  margin-left: 9px;
 }
 
 #enc-izq{
@@ -82,6 +91,7 @@ body{
   background-repeat: no-repeat;
   background-size: 100%;
   width: 48px;
+  height: 48px;
   display: none;
   border-radius: 50%;
 }
@@ -244,6 +254,9 @@ font-family: 'Poiret One', cursive;
 .numpag-botonultima{
   width: 8em;
 }
+.numpag-mas{
+  display: none;
+}
 
 .footer-texto{
   background-color: black;
@@ -307,7 +320,7 @@ font-family: 'Poiret One', cursive;
     height: 300px;
   }
   .port-presentacion{
-    height: 111px;
+    height: auto;
     width: 355px;
   }
   .port-texto{
@@ -347,7 +360,13 @@ font-family: 'Poiret One', cursive;
 
 @media screen and (max-width: 800px)  {
   /*encabezado*/
-  .encabezado{
+  .container{
+    background-color: #273b47;
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+   height: 57px;
+
     width: 100%;
     position: fixed;
     z-index: 1;
@@ -360,7 +379,6 @@ font-family: 'Poiret One', cursive;
   }
   .enc-lista{
     display: block;
-    margin: 0 auto;
     margin-left: -50px;
   }
   .enc-lis-texto::after{
@@ -419,6 +437,82 @@ font-family: 'Poiret One', cursive;
 .footer-final{
   margin-top: 25px;
 }
+.footer-final h6{
+  margin: 0;
+}
+}
+@media screen and (max-width:500px) {
+  /*encabezado*/
 
+  #menu{
+    height: calc(100vh - 57px);
+    justify-content: space-between;
+  }
+  .enc-logo{
+    width: 150px;
+    height: 24px;
+  }
+  .enc-lista{
+    height: 82%;
+  }
+
+  .enc-lista li{
+  height: calc(89% / 5);
+  }
+
+  .enc-button{
+    position: relative;
+    bottom: 32px;
+  }
+  /*portada*/
+  .background{
+    height: 362px;
+  }
+  .port-presentacion{
+    background-color: inherit;
+    width:100%;
+    margin-left: 0;
+  }
+  .port-autor{
+    border-top: 3px double white;
+  }
+  .port-texto{
+    font-size: 23px;
+  }
+
+  .port-texto, .port-aut-texto, .port-aut-fecha{
+    color: aliceblue ;
+  }
+  .port-aut-img{
+    width: 46px;
+    height: 50px;
+  }
+  /*cuerpo*/
+  .cuerp-art-nombre{
+    font-size: 18px;
+  }
+
+  .botonpag, .numpag-text{
+    display: none;
+  }
+  .numpag-mas{
+    font-size: 25px;
+    display: block;
+    margin:0;
+    width: 81%;
+    background-color: #ff4842;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    margin-top: 16px;
+    border: none;
+    border-bottom: 8.5px solid #d0272a;
+    padding-top: 18px;
+    margin-bottom: 74px;
+  }
+  /*footer*/
+  .footer-final{
+    margin-top: 14px;
+  }
 
 }
